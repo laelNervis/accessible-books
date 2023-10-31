@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Teste para numeração da página</title>
+        <style>
+            /* .visually-hidden {
+                position: absolute;
+                left: -99em;
+                height: 0;
+            } */
+
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip-path: polygon(0 0, 0 0, 0 0);
+                white-space: nowrap;
+                border: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Teste para numeração da página</h1>
+        <p>O objetivo deste teste é avaliar formatos para exibição do número da página, incluindo a leitura da palavra "página" antes da numeração apenas para os leitores de tela.</p>
+        <div>
+            <label>Exemplo 1</label>
+            <span role="textbox" aria-labelledby="pagina-label">X</span>
+            <div id="pagina-label" class="sr-only" aria-hidden="true">Página X</div>
+        </div>
+
+        <div>
+            <label>Exemplo 2</label>
+            <span role="textbox" aria-label="Página X">X</span>
+        </div>
+
+        <div>
+            <label>Exemplo 3</label>
+            <span class="sr-only">Página</span> X
+        </div>
+    </body>
+</html>
+

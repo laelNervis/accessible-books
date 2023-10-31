@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Exemplo de ARIA para número da página</title>
+</head>
+<body>
+  <h1>Meu documento</h1>
+  <p>Este é um exemplo de como usar ARIA para exibir o número da página.</p>
+  <p>
+    <span id="numero-da-pagina">2</span>
+  </p>
+  <script>
+    const numeroDaPagina = document.querySelector("#numero-da-pagina");
+    numeroDaPagina.setAttribute("aria-label", "Página");
+    numeroDaPagina.setAttribute("aria-live", "polite");
+  </script>
+    
+</body>
+</html>

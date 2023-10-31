@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Testes de leitura de tabelas com NVDA</title>
+    </head>
+    <body>
+        <h1>Testes de leitura de tabelas com o NVDA</h1>
+        <p>O objetivo destes testes é verificar como é feita a leitura no NVDA para tabelas com cabeçalhos nas linhas, 
+            células mescladas, cabeçalhos em linha e colunas combinadas, dois cabeçalhos.</p>
+
+        <h2>Tabela com cabeçalhos nas colunas e linhas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Janeiro</th>
+                    <th scope="col">Fevereiro</th>
+                    <th scope="col">Março</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Receitas</th>
+                    <td>R$ 10.000,00</td>
+                    <td>R$ 12.000,00</td>
+                    <td>R$ 15.000,00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Despesas</th>
+                    <td>R$ 5.000,00</td>
+                    <td>R$ 6.000,00</td>
+                    <td>R$ 7.000,00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Lucro</th>
+                    <td>R$ 5.000,00</td>
+                    <td>R$ 6.000,00</td>
+                    <td>R$ 8.000,00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tabela com cabeçalhos nas colunas e linhas - v2</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th id="janeiro">Janeiro</th>
+                    <th id="fevereiro">Fevereiro</th>
+                    <th id="marco">Março</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th id="receitas">Receitas</th>
+                    <td headers="janeiro receitas">R$ 10.000,00</td>
+                    <td headers="fevereiro receitas">R$ 12.000,00</td>
+                    <td headers="marco receitas">R$ 15.000,00</td>
+                </tr>
+                <tr>
+                    <th id="despesas">Despesas</th>
+                    <td headers="janeiro despesas">R$ 5.000,00</td>
+                    <td headers="fevereiro despesas">R$ 6.000,00</td>
+                    <td headers="marco despesas">R$ 7.000,00</td>
+                </tr>
+                <tr>
+                    <th id="lucro">Lucro</th>
+                    <td headers="janeiro lucro">R$ 5.000,00</td>
+                    <td headers="fevereiro lucro">R$ 6.000,00</td>
+                    <td headers="marco lucro">R$ 8.000,00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tabela com cabeçalhos nas colunas e sem cabeçalhos nas linhas - v2</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <th scope="col">Janeiro</th>
+                    <th scope="col">Fevereiro</th>
+                    <th scope="col">Março</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Receitas</td>
+                    <td>R$ 10.000,00</td>
+                    <td>R$ 12.000,00</td>
+                    <td>R$ 15.000,00</td>
+                </tr>
+                <tr>
+                    <td>Despesas</td>
+                    <td>R$ 5.000,00</td>
+                    <td>R$ 6.000,00</td>
+                    <td>R$ 7.000,00</td>
+                </tr>
+                <tr>
+                    <td>Lucro</td>
+                    <td>R$ 5.000,00</td>
+                    <td>R$ 6.000,00</td>
+                    <td>R$ 8.000,00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tabela com cabeçalhos apenas nas linhas</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <th scope="row">Receitas</th>
+                    <td>R$ 37.000,00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Despesas</th>
+                    <td>R$ 18.000,00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Lucro</th>
+                    <td>R$ 19.000,00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tabela com cabeçalhos apenas nas linhas - v2</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <th id="receitas2">Receitas</th>
+                    <td headers="receitas2">R$ 37.000,00</td>
+                </tr>
+                <tr>
+                    <th id="despesas2">Despesas</th>
+                    <td headers="despesas2">R$ 18.000,00</td>
+                </tr>
+                <tr>
+                    <th id="lucro2">Lucro</th>
+                    <td headers="lucro2">R$ 19.000,00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tabela com células mescladas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Janeiro</th>
+                    <th scope="col">Fevereiro</th>
+                    <th scope="col">Março</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Receitas</th>
+                    <td colspan="3">R$ 37.000,00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Despesas</th>
+                    <td colspan="3">R$ 18.000,00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Lucro</th>
+                    <td colspan="3">R$ 19.000,00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tabela com dois cabeçalhos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th colspan="2">Vendas</th>
+                    <th colspan="2">Lucro</th>
+                </tr>
+                <tr>
+                    <th>Mês</th>
+                    <th>Produto A</th>
+                    <th>Produto B</th>
+                    <th>Produto A</th>
+                    <th>Produto B</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Janeiro</th>
+                    <td>R$ 10.000,00</td>
+                    <td>R$ 8.000,00</td>
+                    <td>R$ 2.000,00</td>
+                    <td>R$ 1.000,00</td>
+                </tr>
+                <tr>
+                    <th>Fevereiro</th>
+                    <td>R$ 12.000,00</td>
+                    <td>R$ 9.000,00</td>
+                    <td>R$ 2.500,00</td>
+                    <td>R$ 1.200,00</td>
+                </tr>
+                <tr>
+                    <th>Março</th>
+                    <td>R$ 15.000,00</td>
+                    <td>R$ 10.000,00</td>
+                    <td>R$ 3.000,00</td>
+                    <td>R$ 1.500,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
