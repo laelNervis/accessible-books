@@ -6,8 +6,8 @@
   <title>Tabela com Quebras de Página</title>
   <style>
     .page-break {
-      page-break-before: always;
-      /* ou use page-break-after: always; dependendo de onde você quer a quebra */
+      break-before: page;
+      /* page-break-before: always; */
     }
   </style>
 </head>
@@ -36,22 +36,8 @@
         <td>3A</td>
         <td>3B</td>
       </tr>
-    </tbody>
-  </table>
-
-  <!-- Quebra de Página -->
-  <div class="page-break"></div>
-
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Coluna 1</th>
-        <th>Coluna 2</th>
-      </tr>
-    </thead>
-    <tbody>
       <!-- Página 2 -->
-      <tr>
+      <tr class="page-break">
         <td>4A</td>
         <td>4B</td>
       </tr>
