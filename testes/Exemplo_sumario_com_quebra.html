@@ -22,9 +22,33 @@
 </head>
 <body>
 
-<h1>Sumário</h1>
+<h1>Exemplo de Sumário com quebra de páginas</h1>
 
-<p>Exemplo de sumário com quebra de páginas.</p>
+<section>
+    <p>Como cada página contém a numeração no início, o sumário deve ser dividido em duas partes. 
+        Para que o usuário do leitor de tela saiba que o sumário continua na página seguinte, foram adicionados textos ocultos no final da primeira página, e no início da segunda página. 
+        Os textos ocultos são lidos pelo leitor de tela, mas não são exibidos na tela.</p>
+    
+    <p>Além disso, tanto na numeração das páginas quanto nos links do sumário, foi adicionado um texto oculto com a palavra "página", para que o usuário do leitor de tela saiba que se trata de uma página.</p>
+    
+    <p>Neste exemplo, os textos foram ocultos usando a classe CSS "sr-only", definida da seguinte forma:</p>
+    
+    <pre>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip-path: polygon(0 0, 0 0, 0 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </pre>
+</section>
+
+<h2>Sumário</h2>
 
 <p class="page-break"><span role="text" class="sr-only">Página</span>1</p>
 <nav role="navigation" aria-label="Sumário">
