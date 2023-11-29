@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Teste para numeração da página</title>
-        <style>
-            /* .visually-hidden {
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste para numeração da página</title>
+    <style>
+        label {
+            font-weight: bold;
+        }
+
+        pre code {
+            background-color: #eee;
+            border: 1px solid #999;
+            display: block;
+            padding: 5px;
+            margin: 0px 30px;
+        }
+
+        /* .visually-hidden {
                 position: absolute;
                 left: -99em;
                 height: 0;
             } */
 
-            .sr-only {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip-path: polygon(0 0, 0 0, 0 0);
-                white-space: nowrap;
-                border: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Teste para numeração da página</h1>
-        <p>O objetivo deste teste é avaliar formatos para exibição do número da página, incluindo a leitura da palavra "página" antes da numeração apenas para os leitores de tela.</p>
-        <div>
-            <label>Exemplo 1</label>
-            <span role="textbox" aria-labelledby="pagina-label">X</span>
-            <div id="pagina-label" class="sr-only" aria-hidden="true">Página X</div>
-        </div>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip-path: polygon(0 0, 0 0, 0 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
 
-        <div>
-            <label>Exemplo 2</label>
-            <span role="textbox" aria-label="Página X">X</span>
-        </div>
+<body>
+    <h1>Teste para numeração da página</h1>
+    <p>O objetivo deste teste é avaliar formatos para exibição do número da página, incluindo a leitura da palavra
+        "página" antes da numeração apenas para os leitores de tela.</p>
+    <div>
+        <h2>Exemplo 1</h2>
+        <span role="textbox" aria-labelledby="pagina-label">X</span>
+        <div id="pagina-label" class="sr-only" aria-hidden="true">Página X</div>
+        <p>
+            <label>Explicação: </label>
+            Neste exemplo, X é inserido em um span com o atributo <code>role="textbox"</code> e o atributo
+            <code>aria-labelledby="pagina-label"</code> referencia o id do elemento que contém o texto "Página X".
+            <code>
+                <pre>
+                    &lt;span role="textbox" aria-labelledby="pagina-label"&gt;X&lt;/span&gt;
+                    &lt;div id="pagina-label" class="sr-only" aria-hidden="true"&gt;Página X&lt;/div&gt;</pre>
+            </code>
+        </p>
+    </div>
+    <div>
+        <h2>Exemplo 2</h2>
+        <span role="textbox" aria-label="Página X">X</span>
+        <p>
+            <label>Explicação: </label>
+            Neste exemplo, X é inserido em um span com o atributo <code>role="textbox"</code> e o atributo <code>aria-label="Página X"</code>.
+            <code>
+                <pre>
+                    &lt;span role="textbox" aria-label="Página X"&gt;X&lt;/span&gt;</pre>
+            </code>
+        </p>
+    </div>
+    <div>
+        <h2>Exemplo 3</h2>
+        <span role="text" class="sr-only">Página</span> X
+        <p>
+            <label>Explicação: </label>
+            Neste exemplo, apenas a palavra "Página" é inserida em um span oculto por CSS.
+            O atributo <code>role="text"</code> é usado para indicar que o elemento contém texto. Isso evita que o leitor de tela
+            interrompa a leitura sequencial.
+        <code>
+                <pre>
+                    &lt;span role="text" class="sr-only"&gt;Página&lt;/span&gt; X</pre>
+        </code>
+        </p>
+        <p>
+        <code>
+                <pre>
+                    .sr-only {
+                        position: absolute;
+                        width: 1px;
+                        height: 1px;
+                        padding: 0;
+                        margin: -1px;
+                        overflow: hidden;
+                        clip-path: polygon(0 0, 0 0, 0 0);
+                        white-space: nowrap;
+                        border: 0;
+                    }</pre>
+            </code>
+        </p>
+    </div>
+</body>
 
-        <div>
-            <label>Exemplo 3</label>
-            <span class="sr-only">Página</span> X
-        </div>
-    </body>
 </html>
-
