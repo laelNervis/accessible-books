@@ -8,15 +8,24 @@
 
 
   <h2>Exemplo 1: Fração</h2>
-<math>
+  <math alttext="1 sobre 2">  
     <mfrac>
         <mn>1</mn>
         <mn>2</mn>
     </mfrac>
 </math>
 
-<h2>Exemplo 2: Raiz Quadrada</h2>
+<h2>Exemplo 2: Raiz Quadrada  
+    <span role="math">
+        <math>
+            <msqrt>
+                <mn>9</mn>
+            </msqrt>
+        </math>
+    </span>
+</h2>
 <math>
+    <annotation encoding="application/x-tex"> \sqrt{9} </annotation>
     <msqrt>
         <mn>9</mn>
     </msqrt>
@@ -25,31 +34,38 @@
 
 <h2>Exemplo 3: Fórmula Quadrática</h2>
 <math>
-    <mrow>
-        <mi>x</mi>
-        <mo>=</mo>
-        <mfrac>
-            <mrow>
-                <mo>-</mo>
-                <mi>b</mi>
-                <mo>&plusmn;</mo>
-                <msqrt>
-                    <msup>
-                        <mi>b</mi>
-                        <mn>2</mn>
-                    </msup>
+    
+    <semantics>
+         <!-- The first child is the MathML expression rendered by default. -->
+        <mrow>
+            <mi>x</mi>
+            <mo>=</mo>
+            <mfrac>
+                <mrow>
                     <mo>-</mo>
-                    <mn>4</mn>
+                    <mi>b</mi>
+                    <mo>&plusmn;</mo>
+                    <msqrt>
+                        <msup>
+                            <mi>b</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>-</mo>
+                        <mn>4</mn>
+                        <mi>a</mi>
+                        <mi>c</mi>
+                    </msqrt>
+                </mrow>
+                <mrow>
+                    <mn>2</mn>
                     <mi>a</mi>
-                    <mi>c</mi>
-                </msqrt>
-            </mrow>
-            <mrow>
-                <mn>2</mn>
-                <mi>a</mi>
-            </mrow>
-        </mfrac>
-    </mrow>
+                </mrow>
+            </mfrac>
+        </mrow>
+
+        <!-- Annotate with LaTeX, a lightweight markup language to write mathematical formulas. -->
+    <annotation encoding="application/x-tex"> x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} </annotation>
+    </semantics>
 </math>
 
 <h2>Exemplo 4: Integral Definida</h2>
@@ -96,3 +112,7 @@
     </mrow>
 </math>
 
+<h2> 
+    Exemplo 6: Equação em linha
+</h2>
+Se <span role="math">2 + x = 9</span>, qual é o valor de <var>x</var>?

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplos de fórmulas com MathML</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+
+<body>
+
+    <h1>Exemplos de fórmulas com MathML</h1>
+
+    <section>
+        <p>Esta página contém exemplos de fórmulas matemáticas escritas com MathML. Diferentes abordagens são utilizadas
+            nos exemplos. O objetivo é explorar como o leitor de tela é capaz de ler cada uma delas, em cada exemplo.
+        </p>
+        <p>
+            Tente explorar cada exemplo com o leitor de tela, usando os recursos que conhece, e veja como ele se comporta. 
+            Se possível, anote para cada exemplo:
+            <ul>
+                <li>
+                    O que o leitor de tela lê quando a fórmula é escrita apenas com MathML, sem nenhum texto alternativo?
+                </li>
+                <li>
+                    Em que idioma é lida a fórmula?
+                </li>
+                <li>
+                    Como o leitor de tela se comporta nas diferentes abordagens de texto alternativo?
+                </li>
+                <li>
+                    Você possui algum plugin ou extensão que melhora a leitura de fórmulas matemáticas? Qual?
+                </li>
+            </ul>
+        </p>
+    </section>
+
+    <section>
+        <h2>Exemplo 1: Fração</h2>
+
+        <p>
+            A fórmula a seguir é uma fração, que representa o número 1 sobre o número 2. Ela está escrita apenas com
+            MathML,
+            sem nenhum texto alternativo.
+        </p>
+
+        <math>
+            <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+            </mfrac>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, mas com um texto alternativo inserido com o atributo <code>aria-label</code> na
+            tag <code>math</code>. O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <math aria-label="1 sobre 2">
+            <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+            </mfrac>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, com o texto alternativo inserido no atributo <code>aria-label</code> na tag
+            <code>math</code>. Desta vez, o texto alternativo é a fórmula escrita em notação matemática.
+        </p>
+
+        <math aria-label="1/2">
+            <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+            </mfrac>
+        </math>
+
+        <p>
+            Agora, a mesma fórmula, mas com um texto alternativo inserido em uma tag <code>span</code> separada, com o
+            atributo
+            <code>aria-label</code>, e a tag <code>math</code> é oculta para o leitor de tela com o <code>aria-hidden</code>.
+            O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <span aria-label="1 sobre 2"></span>
+        <math aria-hidden="true">
+            <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+            </mfrac>
+        </math>
+    </section>
+
+    <section>
+        <h2>Exemplo 2: Raiz Quadrada</h2>
+
+        <p>
+            A fórmula a seguir representa a raíz quadrada do número 9. Ela está escrita apenas com MathML, sem nenhum 
+            texto alternativo.
+        </p>
+
+        <math>
+            <msqrt>
+                <mn>9</mn>
+            </msqrt>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, mas com um texto alternativo inserido com o atributo <code>aria-label</code> na
+            tag <code>math</code>. O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <math aria-label="Raíz quadrada de 9">
+            <msqrt>
+                <mn>9</mn>
+            </msqrt>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, com o texto alternativo inserido no atributo <code>aria-label</code> na tag
+            <code>math</code>. Desta vez, o texto alternativo é a fórmula escrita em notação matemática.
+        </p>
+
+        <math aria-label="sqrt{9}">
+            <msqrt>
+                <mn>9</mn>
+            </msqrt>
+        </math>
+
+        <p>
+            Agora, a mesma fórmula, mas com um texto alternativo inserido em uma tag <code>span</code> separada, com o
+            atributo <code>aria-label</code>, e a tag <code>math</code> é oculta para o leitor de tela com o 
+            <code>aria-hidden</code>. O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <span aria-label="Raíz quadrada de 9"></span>
+        <math aria-hidden="true">
+            <msqrt>
+                <mn>9</mn>
+            </msqrt>
+        </math>
+    </section>
+
+    <section>
+        <h2>Exemplo 3: Fórmula Quadrática</h2>
+
+        <p>
+            A fórmula a seguir representa a fórmula quadrática conhecida como Fórmula de Bháskara. Ela está escrita 
+            apenas com MathML, sem nenhum texto alternativo.
+        </p>
+
+        <math>
+            <semantics>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mrow>
+                            <mo>-</mo>
+                            <mi>b</mi>
+                            <mo>&plusmn;</mo>
+                            <msqrt>
+                                <msup>
+                                    <mi>b</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>-</mo>
+                                <mn>4</mn>
+                                <mi>a</mi>
+                                <mi>c</mi>
+                            </msqrt>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                            <mi>a</mi>
+                        </mrow>
+                    </mfrac>
+                </mrow>
+            </semantics>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, mas com um texto alternativo inserido com o atributo <code>aria-label</code> na
+            tag <code>math</code>. O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <math aria-label="x igual fração. Numerador: menos b mais ou menos raíz quadrada de b² menos 4 a c. Denominador: 2 a.">
+            <semantics>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mrow>
+                            <mo>-</mo>
+                            <mi>b</mi>
+                            <mo>&plusmn;</mo>
+                            <msqrt>
+                                <msup>
+                                    <mi>b</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>-</mo>
+                                <mn>4</mn>
+                                <mi>a</mi>
+                                <mi>c</mi>
+                            </msqrt>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                            <mi>a</mi>
+                        </mrow>
+                    </mfrac>
+                </mrow>
+            </semantics>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, com o texto alternativo inserido no atributo <code>aria-label</code> na tag
+            <code>math</code>. Desta vez, o texto alternativo é a fórmula escrita em notação matemática.
+        </p>
+
+        <math aria-label="x = frac{ - b pm sqrt{b^2 - 4 a c} }{ 2 a }">
+            <semantics>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mrow>
+                            <mo>-</mo>
+                            <mi>b</mi>
+                            <mo>&plusmn;</mo>
+                            <msqrt>
+                                <msup>
+                                    <mi>b</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>-</mo>
+                                <mn>4</mn>
+                                <mi>a</mi>
+                                <mi>c</mi>
+                            </msqrt>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                            <mi>a</mi>
+                        </mrow>
+                    </mfrac>
+                </mrow>
+            </semantics>
+        </math>
+
+        <p>
+            Agora, a mesma fórmula, mas com um texto alternativo inserido em uma tag <code>span</code> separada, com o
+            atributo <code>aria-label</code>, e a tag <code>math</code> é oculta para o leitor de tela com o 
+            <code>aria-hidden</code>. O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <span aria-label="x igual fração. Numerador: menos b mais ou menos raíz quadrada de b² menos 4 a c. Denominador: 2 a."></span>
+        <math aria-hidden="true">
+            <semantics>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mrow>
+                            <mo>-</mo>
+                            <mi>b</mi>
+                            <mo>&plusmn;</mo>
+                            <msqrt>
+                                <msup>
+                                    <mi>b</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>-</mo>
+                                <mn>4</mn>
+                                <mi>a</mi>
+                                <mi>c</mi>
+                            </msqrt>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                            <mi>a</mi>
+                        </mrow>
+                    </mfrac>
+                </mrow>
+            </semantics>
+        </math>
+    </section>
+
+    <section>
+        <h2>Exemplo 4: Integral Definida</h2>
+
+        <p>
+            A fórmula a seguir representa uma integral definida. Ela está escrita apenas com MathML, sem nenhum texto
+            alternativo.
+        </p>
+
+        <math>
+            <mrow>
+                <mi>&int;</mi>
+                <msubsup>
+                    <mi>f</mi>
+                    <mi>a</mi>
+                    <mi>b</mi>
+                </msubsup>
+                <mi>d</mi>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mo>[</mo>
+                <msubsup>
+                    <mi>F</mi>
+                    <mi>b</mi>
+                    <mo>-</mo>
+                    <mi>F</mi>
+                    <mi>a</mi>
+                </msubsup>
+                <mo>]</mo>
+            </mrow>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, mas com um texto alternativo inserido com o atributo <code>aria-label</code> na
+            tag <code>math</code>. O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <math aria-label="Integral de f(x) no intervalo [a, b] é igual à f(x) em b menos f(x) em a">
+            <mrow>
+                <mi>&int;</mi>
+                <msubsup>
+                    <mi>f</mi>
+                    <mi>a</mi>
+                    <mi>b</mi>
+                </msubsup>
+                <mi>d</mi>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mo>[</mo>
+                <msubsup>
+                    <mi>F</mi>
+                    <mi>b</mi>
+                    <mo>-</mo>
+                    <mi>F</mi>
+                    <mi>a</mi>
+                </msubsup>
+                <mo>]</mo>
+            </mrow>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, com o texto alternativo inserido no atributo <code>aria-label</code> na tag
+            <code>math</code>. Desta vez, o texto alternativo é a fórmula escrita em notação matemática.
+        </p>
+
+        <math aria-label="int_a^b f(x) dx = [ F(b) - F(a) ]">
+            <mrow>
+                <mi>&int;</mi>
+                <msubsup>
+                    <mi>f</mi>
+                    <mi>a</mi>
+                    <mi>b</mi>
+                </msubsup>
+                <mi>d</mi>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mo>[</mo>
+                <msubsup>
+                    <mi>F</mi>
+                    <mi>b</mi>
+                    <mo>-</mo>
+                    <mi>F</mi>
+                    <mi>a</mi>
+                </msubsup>
+                <mo>]</mo>
+            </mrow>
+        
+        </math>
+
+        <p>
+            Agora, a mesma fórmula, mas com um texto alternativo inserido em uma tag <code>span</code> separada, com o
+            atributo <code>aria-label</code>, e a tag <code>math</code> é oculta para o leitor de tela com o 
+            <code>aria-hidden</code>. O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <span aria-label="Integral de f(x) no intervalo [a, b] é igual à f(x) em b menos f(x) em a"></span>
+        <math aria-hidden="true">
+            <mrow>
+                <mi>&int;</mi>
+                <msubsup>
+                    <mi>f</mi>
+                    <mi>a</mi>
+                    <mi>b</mi>
+                </msubsup>
+                <mi>d</mi>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mo>[</mo>
+                <msubsup>
+                    <mi>F</mi>
+                    <mi>b</mi>
+                    <mo>-</mo>
+                    <mi>F</mi>
+                    <mi>a</mi>
+                </msubsup>
+                <mo>]</mo>
+            </mrow>
+        </math>
+    
+    </section>
+
+    <section>
+        <h2>Exemplo 5: Fórmula de Euler</h2>
+
+        <p>
+            A fórmula a seguir é conhecida como Fórmula de Euler. Ela está escrita apenas com MathML, sem nenhum texto
+            alternativo.
+        </p>
+
+        <math>
+            <mrow>
+                <msup>
+                    <mi>e</mi>
+                    <mi>i</mi>
+                </msup>
+                <mo>=</mo>
+                <mi>cos</mi>
+                <mi>&theta;</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>sen</mi>
+                <mi>&theta;</mi>
+            </mrow>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, mas com um texto alternativo inserido com o atributo <code>aria-label</code> na
+            tag <code>math</code>. O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <math aria-label="e elevado a i é igual a cosseno de theta mais i vezes seno de theta">
+            <mrow>
+                <msup>
+                    <mi>e</mi>
+                    <mi>i</mi>
+                </msup>
+                <mo>=</mo>
+                <mi>cos</mi>
+                <mi>&theta;</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>sen</mi>
+                <mi>&theta;</mi>
+            </mrow>
+        </math>
+
+        <p>
+            A seguir, a mesma fórmula, com o texto alternativo inserido no atributo <code>aria-label</code> na tag
+            <code>math</code>. Desta vez, o texto alternativo é a fórmula escrita em notação matemática.
+        </p>
+
+        <math aria-label="e^i = cos(theta) + i sen(theta)">
+            <mrow>
+                <msup>
+                    <mi>e</mi>
+                    <mi>i</mi>
+                </msup>
+                <mo>=</mo>
+                <mi>cos</mi>
+                <mi>&theta;</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>sen</mi>
+                <mi>&theta;</mi>
+            </mrow>
+        </math>
+
+        <p>
+            Agora, a mesma fórmula, mas com um texto alternativo inserido em uma tag <code>span</code> separada, com o
+            atributo <code>aria-label</code>, e a tag <code>math</code> é oculta para o leitor de tela com o 
+            <code>aria-hidden</code>. O texto alternativo é uma descrição da fórmula.
+        </p>
+
+        <span aria-label="e elevado a i é igual a cosseno de theta mais i vezes seno de theta"></span>
+        <math aria-hidden="true">
+            <mrow>
+                <msup>
+                    <mi>e</mi>
+                    <mi>i</mi>
+                </msup>
+                <mo>=</mo>
+                <mi>cos</mi>
+                <mi>&theta;</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>sen</mi>
+                <mi>&theta;</mi>
+            </mrow>
+        </math>
+    </section>
+</body>
