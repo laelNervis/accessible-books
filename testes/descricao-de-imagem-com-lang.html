@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de descrição de imagem com múltiplos idiomas</title>
+    <style>
+        /* Classe utilitária usada para esconder visualmente o conteúdo,
+           mantendo-o acessível para leitores de tela */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip-path: polygon(0 0, 0 0, 0 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de descrição de imagem com múltiplos idiomas</h1>
+
+    <p>
+        Esta página apresenta diferentes formas de fornecer descrições de imagem acessíveis a leitores de tela,
+        contemplando conteúdo em dois idiomas (português e inglês). O foco é demonstrar como usar o atributo
+        <code>aria-describedby</code> para associar uma descrição rica e multilíngue à imagem, mantendo a acessibilidade.
+    </p>
+
+    <!-- EXEMPLO 1 -->
+    <h2>Exemplo 1 – aria-describedby com &lt;figure&gt; e &lt;figcaption&gt; (oculta)</h2>
+    <p>
+        Neste exemplo, a imagem é envolvida pela estrutura semântica HTML5 <code>&lt;figure&gt;</code> e
+        <code>&lt;figcaption&gt;</code>. A legenda é visualmente escondida usando a classe <code>sr-only</code>,
+        mas permanece acessível aos leitores de tela via <code>aria-describedby</code>.
+    </p>
+    <figure>
+        <img src="images/livro.jpg" alt="Capa do livro" aria-describedby="desc-img">
+        <figcaption id="desc-img" class="sr-only">
+            <span lang="pt">Capa do livro com o título </span>
+            <span lang="en">Test of Image description with multiple languages and accessibility features for screen readers</span>.
+        </figcaption>
+    </figure>
+
+    <!-- EXEMPLO 2 -->
+    <h2>Exemplo 2 – aria-describedby com &lt;div&gt; em vez de &lt;figure&gt;</h2>
+    <p>
+        Aqui usamos uma <code>&lt;div&gt;</code> comum em vez de <code>&lt;figure&gt;</code>. A descrição continua
+        associada via <code>aria-describedby</code>, e o conteúdo multilíngue permanece acessível por meio da marcação
+        com <code>lang</code>. Essa abordagem evita que o leitor de tela anuncie elementos estruturais como "figura"
+        e "legenda", tornando a leitura mais direta.
+    </p>
+    <div>
+        <img src="images/livro.jpg" alt="Capa do livro" aria-describedby="desc-img-div">
+        <div id="desc-img-div" class="sr-only">
+            <span lang="pt">Capa do livro com o título </span>
+            <span lang="en">Test of Image description with multiple languages and accessibility features for screen readers</span>.
+        </div>
+    </div>
+
+    <!-- EXEMPLO 3 -->
+    <h2>Exemplo 3 – alt parcial + aria-describedby com detalhamento multilíngue</h2>
+    <p>
+        Este exemplo combina uma descrição breve no atributo <code>alt</code> (que evita que a imagem
+        seja anunciada como "gráfico sem etiqueta" por alguns leitores de tela como o NVDA) com um detalhamento adicional
+        multilíngue via <code>aria-describedby</code>. É a solução mais recomendada, pois une clareza imediata e descrição completa.
+    </p>
+    <
