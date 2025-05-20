@@ -52,7 +52,7 @@
         e "legenda", tornando a leitura mais direta.
     </p>
     <div>
-        <img src="images/livro.jpg" alt="Capa do livro" aria-describedby="desc-img-div">
+        <img src="images/livro.jpg" alt="" aria-describedby="desc-img-div">
         <div id="desc-img-div" class="sr-only">
             <span lang="pt">Capa do livro com o título </span>
             <span lang="en">Test of Image description with multiple languages and accessibility features for screen readers</span>.
@@ -64,6 +64,13 @@
     <p>
         Este exemplo combina uma descrição breve no atributo <code>alt</code> (que evita que a imagem
         seja anunciada como "gráfico sem etiqueta" por alguns leitores de tela como o NVDA) com um detalhamento adicional
-        multilíngue via <code>aria-describedby</code>. É a solução mais recomendada, pois une clareza imediata e descrição completa.
+        multilíngue via <code>aria-describedby</code>. 
     </p>
-    <
+    <img src="images/livro.jpg" alt="Capa do livro." aria-describedby="desc-img-div-2">
+    <div id="desc-img-div-2" class="sr-only">
+        <span lang="pt">O título é: </span>
+        <span lang="en">Test of Image description with multiple languages and accessibility features for screen readers</span>.
+    </div>
+
+</body>
+</html>
